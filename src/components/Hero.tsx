@@ -15,10 +15,7 @@ const Hero = () => {
               Aspiring Full Stack Developer
             </h3>
             <p className="text-gray-300 text-lg max-w-xl">
-              I am a motivated and versatile individual, always eager to take on new
-              challenges. With a passion for learning I am dedicated to delivering
-              high-quality results. With a positive attitude and a growth mindset,
-              I am ready to make a meaningful contribution and achieve great things.
+            I am a dedicated and adaptable person who enjoys taking on new challenges. I love learning and always do my best to get good results. With a positive mindset and a strong desire to grow, I aim to make a meaningful impact and achieve success.
             </p>
             <br />
             <a target="_blank" href="https://drive.google.com/file/d/1mHTobJ-Nt4x8QKBQNOFMeOSdSfPwtBQ3/view?usp=drive_link">
