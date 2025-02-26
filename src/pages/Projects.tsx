@@ -20,6 +20,8 @@ interface Project {
   date: string;
   description: string;
   image: string;
+  githubLink: string;
+  liveLink: string;
 }
 
 const projects: Project[] = [
@@ -31,7 +33,9 @@ const projects: Project[] = [
     description: `Resource Sharing Platform for ISE department
 A centralized platform where all resources across all semesters are well organized for both students and faculty. The platform will feature analytics to provide insights into the usage and effectiveness of each resource.
 Key features include integration of AI and data scrapping. The platform will deliver personalized study materials based on individual needs and preferences, helping students focus on the most relevant content. Focused on real-time users. And AI generated summaries.`,
-    image: versatileShare
+    image: versatileShare,
+    githubLink: 'https://github.com/Rakeshappu/VersatileShare',
+    liveLink:''
   },
   {
     title: "Job Portal",
@@ -45,7 +49,9 @@ job postings, and for applicants to search, filter, and submit
 applications.
 • Focused on user authentication, data management with MongoDB,
 and server-side logic using Node.js and Express.`,
-    image: jobPortal
+    image: jobPortal,
+    githubLink: 'https://github.com/Rakeshappu/job-portal',
+    liveLink:''
   },
   {
     title: "Carbon Footprint Calculator",
@@ -60,7 +66,9 @@ kilometers driven, etc.
 Django powered the back-end for input handling and calculations.
 • Provided users with actionable insights, including tree-planting
 equivalents and carbon reduction tips.`,
-    image: carbonFootprint
+    image: carbonFootprint,
+    githubLink: 'https://github.com/Rakeshappu/TechiesW18',
+    liveLink:''
   },
   {
     title: "Resume Builder",
@@ -69,7 +77,9 @@ equivalents and carbon reduction tips.`,
     // startDate: "2023-07",
     // endDate: "2023-12",
     description: ``,
-    image: resumeBuilder
+    image: resumeBuilder,
+    githubLink: 'https://github.com/Rakeshappu/ResumeBuilder',
+    liveLink:''
   },
   {
     title: "Epolice-website",
@@ -78,7 +88,9 @@ equivalents and carbon reduction tips.`,
     // startDate: "2023-07",
     // endDate: "2023-12",
     description: ``,
-    image: ePoliceWebsite
+    image: ePoliceWebsite,
+    githubLink: 'https://github.com/mr-vbharadwaj/Epolice-website',
+    liveLink:''
   },
   {
     title: "Crop Recommendation Model",
@@ -91,7 +103,9 @@ kilometers driven, etc.
 Django powered the back-end for input handling and calculations.
 • Provided users with actionable insights, including tree-planting
 equivalents and carbon reduction tips.`,
-    image: cropRecommendation
+    image: cropRecommendation,
+    githubLink: 'https://github.com/Rakeshappu/Hacksprint_Chic-coders',
+    liveLink:''
   },
   {
     title: "Text Utils",
@@ -101,21 +115,27 @@ equivalents and carbon reduction tips.`,
 variety of text manipulation features.
 • Key features include word and character counting, space removal,
 auto-dismissing alert messages, and theme customization.`,
-    image: textUtils
+    image: textUtils,
+    githubLink: 'https://github.com/Rakeshappu/TextUtils',
+    liveLink:''
   },
   {
     title: "Rock-Paper-Scissors",
     technologies: "HTML CSS JavaScript",
     date: "May 2024",
     description: ``,
-    image: rockPaper
+    image: rockPaper,
+    githubLink: 'https://github.com/Rakeshappu/Rock-Paper-Scissors',
+    liveLink:''
   },
   {
     title: "Currency Convertor",
     technologies: "JavaScript",
     date: "June 2024",
     description: ``,
-    image: currencyConvertor
+    image: currencyConvertor,
+    githubLink: 'https://github.com/Rakeshappu/CurrencyConvertor',
+    liveLink:''
   },
   {
     title: "URL-Shortener",
@@ -125,7 +145,9 @@ auto-dismissing alert messages, and theme customization.`,
 variety of text manipulation features.
 • Key features include word and character counting, space removal,
 auto-dismissing alert messages, and theme customization.`,
-    image: urlShortener
+    image: urlShortener,
+    githubLink: 'https://github.com/Rakeshappu/URL-Shortener',
+    liveLink:''
   },
   {
     title: "TETRIS GAME",
@@ -135,7 +157,9 @@ auto-dismissing alert messages, and theme customization.`,
 • Utilized HTML and CSS to create an engaging front-end interface.
 Implemented game functionality and mathematical calculations
 using JavaScript.`,
-    image: "/placeholder.svg"
+    image: "/placeholder.svg",
+    githubLink: 'https://github.com/Rakeshappu/Tetris',
+    liveLink:''
   },
   {
     title: "Calculator",
@@ -145,14 +169,18 @@ using JavaScript.`,
 • Utilized HTML and CSS to create an engaging front-end interface.
 Implemented game functionality and mathematical calculations
 using JavaScript.`,
-    image: calculator
+    image: calculator,
+    githubLink: 'https://github.com/Rakeshappu/Calculator',
+    liveLink:''
   },
   {
     title: "Tic-Tac-Toe",
     technologies: "HTML CSS JS",
     date: "May 2024",
     description: ``,
-    image: tictoctoe
+    image: tictoctoe,
+    githubLink: 'https://github.com/Rakeshappu/Tic-Tac-Toe',
+    liveLink:''
   },
 ];
 
@@ -215,7 +243,7 @@ const Projects = () => {
                 <div className="flex flex-wrap gap-4">
                   <a href="">
                     <button className="bg-primary hover:bg-primary-dark text-neutral px-4 sm:px-6 py-2 rounded-full transition-colors duration-300 text-sm sm:text-base">
-                      Code (Github) 
+                      <a href={project.githubLink} target='_blank'>Code (Github)</a>
                     </button>
                   </a>
                   <a href="">
@@ -233,7 +261,7 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <span className="text-white text-base sm:text-xl font-semibold bg-black/50 px-4 sm:px-6 py-2 sm:py-3 rounded-full whitespace-nowrap">
-                    View Code
+                    <a href={project.githubLink} target='_blank'>View Project</a> 
                   </span>
                 </div>
               </div>
