@@ -1,26 +1,35 @@
 
 import { motion } from "framer-motion";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Badge } from "@/components/ui/badge";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { Badge } from "../components/ui/badge";
+import hackerRank from "../images/HackerRank.png"
+import PS from "../images/PS.png"
+import GAI from "../images/GAI.png"
+import NPTL from "../images/NPTL.png"
+import AIML from "../images/ALML.png"
+import AD from "../images/AD.png"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+
 
 const Experience = () => {
   const certificates = [
     {
       id: 1,
-      name: "Problem Solving (4 Starts)",
+      name: "HackerRank badges",
       issuer: "HackerRank",
       date: "Since 2023",
       skills: ["C language, JavaScript"],
-      credentialLink: "#",
+      media: hackerRank,
     },
     {
       id: 2,
-      name: "C Language (4 Starts)",
+      name: "Problem Solving (Basic) Certificate",
       issuer: "HackerRank",
       date: "Since 2023",
       skills: ["C language"],
-      credentialLink: "#",
+      media: PS,
+    
     },
     {
       id: 3,
@@ -28,7 +37,8 @@ const Experience = () => {
       issuer: "All India Council for Technical Education",
       date: "October 2024",
       skills: ["AI"],
-      credentialLink: "9e1f88c410469c0c4408f32ae321d6d0",
+      media: GAI,
+      
     },
     {
       id: 4,
@@ -36,7 +46,8 @@ const Experience = () => {
       issuer: "NPTEL ONLINE CERTIFICATION",
       date: "October 2024",
       skills: ["Python"],
-      credentialLink: "#",
+      media: NPTL,
+    
     },
     {
       id: 5,
@@ -44,23 +55,17 @@ const Experience = () => {
       issuer: "All India Council for Technical Education",
       date: "June 2024",
       skills: ["AI","ML"],
-      credentialLink: "2ddfd068e309db8c8a31cb66afd3ff06",
+      media: AIML,
+      
     },
     {
       id: 6,
-      name: "Problem Solving (Basic) Certificate",
-      issuer: "HackerRank",
-      date: "October 2024",
-      skills: ["C"],
-      credentialLink: "#",
-    },
-    {
-      id: 7,
       name: "Android Developer Virtual Internship",
       issuer: "All India Council for Technical Education",
       date: "January 2024",
       skills: [""],
-      credentialLink: "#",
+      media: AD,
+    
     },
   ];
 
@@ -72,7 +77,6 @@ const Experience = () => {
           Experience
         </h1>
 
-        {/* Experience Section */}
         <section className="mb-16 animate-fade-in">
           <div className="bg-neutral-light/20 backdrop-blur-md rounded-lg p-6 md:p-8 shadow-xl">
             <div className="text-center mb-12">
@@ -99,18 +103,10 @@ const Experience = () => {
                   <li>Software Engineering</li>
                 </ul>
               </div>
-
-              {/* <div className="bg-neutral-light/30 rounded-lg p-6 hover:shadow-md transition-all duration-300">
-                <h3 className="text-xl font-semibold text-primary mb-2">
-                  
-                </h3>
-                
-              </div> */}
             </div>
           </div>
         </section>
 
-        {/* Certificates Section */}
         <section className="animate-fade-in">
           <div className="bg-neutral-light/20 backdrop-blur-md rounded-lg p-6 md:p-8 shadow-xl">
             <h2 className="text-2xl md:text-3xl font-semibold text-primary mb-8 text-center">
@@ -145,14 +141,26 @@ const Experience = () => {
                         </Badge>
                       ))}
                     </div>
-                    <a
-                      href={cert.credentialLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:text-primary-dark underline text-sm mt-auto inline-block"
-                    >
-                      View credential
-                    </a>
+                    
+                    {cert.media && (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <img 
+                            src={cert.media} 
+                            alt={cert.name} 
+                            className="w-full h-auto max-h-40 object-contain mb-4 cursor-pointer hover:opacity-90 transition-opacity"
+                          />
+                        </DialogTrigger>
+                        <DialogContent className="max-w-3xl max-h-[80vh] overflow-auto bg-neutral-light/90 p-4">
+                          <img 
+                            src={cert.media} 
+                            alt={cert.name} 
+                            className="w-full h-auto max-h-[70vh] object-contain mx-auto" 
+                          />
+                        </DialogContent>
+                      </Dialog>
+                    )}
+                    
                   </div>
                 </motion.div>
               ))}
