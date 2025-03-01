@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { Badge } from "../components/ui/badge";
-import hackerRank from "../images/HackerRank.png"
+import hk from "../images/hk.png"
 import PS from "../images/PS.png"
 import GAI from "../images/GAI.png"
 import NPTL from "../images/NPTL.png"
@@ -20,7 +20,7 @@ const Experience = () => {
       issuer: "HackerRank",
       date: "Since 2023",
       skills: ["C language, JavaScript"],
-      media: hackerRank,
+      media: hk,
     },
     {
       id: 2,
