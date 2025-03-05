@@ -28,7 +28,7 @@ const projects: Project[] = [
   {
     title: "Versatile Share",
     technologies: "Next.js, Vite, MERN",
-    date: "August 2025 | Major-Project",
+    date: "Feb - June 2025 | Major-Project",
     // endDate: "2023-06",
     description: `Resource Sharing Platform for ISE department
 A centralized platform where all resources across all semesters are well organized for both students and faculty. The platform will feature analytics to provide insights into the usage and effectiveness of each resource.
